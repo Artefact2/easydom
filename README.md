@@ -19,13 +19,13 @@ Element (DOMElement, Appendable, Insertable, Removable, Renderable)
 Node (DOMNode, Appendable, Insertable, Removable, Renderable)
 
 Appendable
-    ::append($content): Appendable
-    ::prepend($content): Appendable
+    ::append2($content): Appendable
+    ::prepend2($content): Appendable
     ::appendCreate(<same as Document::element()>): Element
 
 Insertable
-    ::before(Node $node): void
-    ::after(Node $node): void
+    ::before2(Node $node): void
+    ::after2(Node $node): void
 
 Removable
     ::remove(): void

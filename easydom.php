@@ -202,7 +202,7 @@ class Node extends \DOMNode {
 trait Appendable {
 
 	/** Append node(s) to this node. */
-	function append($content) {
+	function append2($content) {
 		foreach(Document::_to_nodes($this->ownerDocument, $content) as $e) {
 			$this->appendChild($e);
 		}
@@ -211,7 +211,7 @@ trait Appendable {
 	}
 
 	/** Prepend node(s) to this node. */
-	function prepend($content) {
+	function prepend2($content) {
 		$fc = $this->firstChild;
 
 		foreach(Document::_to_nodes($this->ownerDocument, $content) as $e) {
@@ -243,12 +243,12 @@ trait Appendable {
 trait Insertable {
 
 	/** Insert another node before this node. */
-	function before(Node $node): void {
+	function before2(Node $node): void {
 		$this->parentNode->insertBefore($node, $this);
 	}
 
 	/** Insert another node after this node. */
-	function after(Node $node): void {
+	function after2(Node $node): void {
 		$this->parentNode->insertAfter($node, $this);
 	}
 }
